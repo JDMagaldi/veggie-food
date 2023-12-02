@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VeggyFoods - Página de comida</title>
+
+  <script type="text/javascript" src="function.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link class="tema" rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="colorSelect">
+    <span class="selectColor">Selecciona el color del sitio</span>
+    <div class="containerColors">
+      <div class="colorRed" onclick="cambiarColor('Red')">
+        <i class="bi bi-circle"></i>
+        <i class="bi bi-circle-fill" style="display:none;"></i>
+      </div>
+      <div class="colorBlue" onclick="cambiarColor('Blue')">
+        <i class="bi bi-circle"></i>
+        <i class="bi bi-circle-fill" style="display:none;"></i>
+      </div>
+      <div class="colorYellow" onclick="cambiarColor('Yellow')">
+        <i class="bi bi-circle"></i>
+        <i class="bi bi-circle-fill" style="display:none;"></i>
+      </div>
+    </div>
+  </div>
+<header class="container">
+	<nav class="navbar navbar-expand-lg bg-body-tertiary container navFlotante">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="https://res.cloudinary.com/dewmngezz/image/upload/v1701531709/Logo_a00vyt.png" alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Delivery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ayuda</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle botonCuenta" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Mi cuenta <img id="imageProfile" src="https://res.cloudinary.com/dewmngezz/image/upload/v1701531708/Profileuser_nyc1ln.png" style="width: 40px;margin-left: 20px;">
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
+        <li><a class="dropdown-item" href="#">Detalles de pago</a></li>
+        <li><a class="dropdown-item" href="#">Salir de mi cuenta</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<div class="sliderHorizontal">
+	<div id="carouselExampleIndicators" class="carousel slide">
+  		<div class="carousel-indicators">
+   		<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+ 	    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  		<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item carousel active">
+      <img src="https://res.cloudinary.com/dewmngezz/image/upload/v1701531708/Fondo-1_uuzs3k.jpg" class="d-block w-100">
+      <div class="text-slider"><span>Bienvenido a<br>Veggy Foods</span><br><br><button class="botonExplorar">Explorar <i class="bi bi-arrow-right"></i></button></div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dewmngezz/image/upload/v1701531708/Fondo-2_xzh8ky.jpg" class="d-block w-100">
+      <div class="text-slider"><span>Todo a un<br><b>Buen precio</b></span><br><br><button class="botonExplorar">Explorar <i class="bi bi-arrow-right"></i></button></div>      
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dewmngezz/image/upload/v1701531708/Fondo-3_dwiiqv.jpg" class="d-block w-100">
+      <div class="text-slider"><span>Delicioso y<br><b>Rápido</b></span><br><br><button class="botonExplorar">Explorar <i class="bi bi-arrow-right"></i></button></div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+ 	 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+   	 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+   	 <span class="visually-hidden">Next</span>
+  	</button>
+	</div>
+</div>
+
+<div class="menu container">
+  <div class="tituloSeccion">
+    <h2 class="titulo" style="width: 15% !important;">MENU</h2>
+    <hr style="width: 90% !important;">
+  </div>
+	<div id="carouselExampleCaptions" class="carousel slide container">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner margenContenido">
+    <div class="carousel-item active flexcards">
+      <img src="https://res.cloudinary.com/dewmngezz/image/upload/v1701531708/Food-1_wq1fpu.png">
+      <div class="contentFood">
+        <h5 class="">Tortillas</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button class="botonExplorarDos">Explorar <i class="bi bi-arrow-right"></i></button>
+      </div>
+    </div>
+    <div class="carousel-item flexcards">
+      <img src="https://res.cloudinary.com/dewmngezz/image/upload/v1701531709/Food-3_ub6pqc.png">
+      <div class="contentFood">
+        <h5 class="tituloFood">Arepas colombianas</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button class="">Explorar <i class="bi bi-arrow-right"></i></button>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dewmngezz/image/upload/v1701531708/Food-2_xc1xvg.png">
+      <div class="contentFood">
+        <h5 class="tituloFood">Empanadas</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button class="botonExplorarDos">Explorar <i class="bi bi-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+<div class="delivery container ">
+  <div class="tituloSeccion">
+    <h2 class="" style="width: 15% !important;">DELIVERY</h2>
+    <hr style="width: 80% !important;text-align: right;float: right;position: relative;left: 70px !important;">
+  </div>
+  
+	<div class="deliveryFlex container margenContenido" style="padding:0">
+  <img src="https://res.cloudinary.com/dewmngezz/image/upload/v1701531708/Delivery_a93qey.png" class="" alt="delivery">
+
+  <div class="card-body deliveryContent">
+    <h5 class="card-title textoSolicitar">¡Solicítalo ahora!</h5>
+    <p class="card-text"><i class="bi bi-telephone"></i>3221234567<br>
+      <i class="bi bi-geo-alt-fill"></i>CR 01 101-102</p>
+    <a href="#" class="botonExplorarDos">Llamar ahora <i class="bi bi-arrow-right"></i></a>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  <footer>
+    <div class="container text-center">
+      <div class="row align-items-start">
+        <div class="col">
+          <h5 class="footerTitle">Sobre nosotros</h5>
+          <p class="textoFooter">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem </p>
+        </div>
+        <div class="col">
+          <h5 class="">Nuestras redes</h5>
+          <div class="social">
+            <i class="bi bi-youtube"></i>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+          </div>
+        </div>
+        <div class="col">
+          <h5 class="footerTitle">Nuestra localización</h5>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15905.58630029546!2d-74.15639251470564!3d4.700969013553287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9cb6430f8607%3A0x8eea5954ef14af30!2sEl%20Dorado%20International%20Airport!5e0!3m2!1sen!2sco!4v1701401163029!5m2!1sen!2sco" width="100%" height="200px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
